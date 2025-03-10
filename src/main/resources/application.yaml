@@ -1,0 +1,10 @@
+spring:
+  liquibase:
+    change-log: classpath:db.changelog/changelog.yaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weather_db
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
