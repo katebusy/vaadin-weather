@@ -17,15 +17,12 @@
 ## Запуск приложения
 ### Требования
 Для установки и запуска проекта, необходимы Java 17+, Docker.
-### 1. Настройка PostgreSQL с помощью Docker
-Вы можете запустить PostgreSQL в контейнере Docker с помощью следующей команды:
+### Запуск приложения
+Вы можете запустить приложение с помощью следующих команд:
 ```sh
-docker run --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=weather_db -d -p 5432:5432 postgres
-```
-### 2. Запуск приложения
-Вы можете запустить приложение необходимо ввести с помощью следующей команды:
-```sh
-java -jar target/vaadin-weather-1.0-SNAPSHOT.jar
+cd local // Переход в папку local
+docker-compose up // Запуск docker-compose.yml
+java -jar vaadin-weather.jar // Запуск исполняемого jar файла
 ```
 После этого вы сможете открыть веб-браузер и чтобы увидеть интерфейс, перейти по адресу:
 http://localhost:8080/weather
